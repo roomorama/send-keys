@@ -10,3 +10,7 @@
 And /^I send (.*) to "(.*)"$/ do |key, element|
   find(element).send_string_of_keys(key)
 end
+
+And /^I send (.*) to the active element$/ do |key, element|
+  page.evaluate_script("document.activeElement").send_string_of_keys(key)
+end
