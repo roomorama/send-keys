@@ -62,7 +62,7 @@ module SendKeys
       end
     end
    
-    node.send_keys(send_key)
+    native.send_keys send_key
   end
 end
 
